@@ -7,7 +7,9 @@ var pass = document.getElementById('pass');
 var submitBtn = document.getElementById('submit');
 var err = document.getElementById('err');
 var errH = document.getElementById('errH');
-var i;
+var ctr = 0;
+
+console.log(totQ);
 
 /*-----------------------------------*\
 $ On Body Load
@@ -177,7 +179,7 @@ function resetErr() {
 function startQuiz() {
 	theForm.style.display = 'none'; // hide the password form
 	theQuiz.style.display = 'block'; // show the quiz page
-	randomQ(); // trigger first question
+	generateQ(); // trigger first question
 }
 
 /*-----------------------------------*\
@@ -205,29 +207,23 @@ var O3 = document.getElementById('opt3'); // option 03
 var O4 = document.getElementById('opt4'); // option 04
 
 // generates and places random questions...
-function randomQ() {
+function generateQ() {
 	nextBtn.setAttribute('disabled', 'disabled');
 	var thisAsked = false;
-	var x = Math.floor(Math.random() * totQ.length); // get a random number b/w 0 to total questions
-	while (totQ[x].asked === 0) {
+	while (totQ[ctr].asked === 0) {
 		// if this question is not asked
 		thisAsked = true; // this will be true
-		totQ[x].asked = 1; // mark this as asked
-		queDoneArr.unshift(x); // put in asked quesion array
+		totQ[ctr].asked = 1; // mark this as asked
+		queDoneArr.unshift(ctr); // put in asked quesion array
 		//console.log('QuesDone',queDoneArr);
 		queDone = ++queDone; // increase the counter
-		p.innerHTML = totQ[x].question; // write question
-		O1.innerHTML = totQ[x].opt1; // write option 1
-		O2.innerHTML = totQ[x].opt2; // write option 2
-		O3.innerHTML = totQ[x].opt3; // write option 3
-		O4.innerHTML = totQ[x].opt4; // write option 4
+		p.innerHTML = totQ[ctr].question; // write question
+		O1.innerHTML = totQ[ctr].options[0]; // write option 1
+		O2.innerHTML = totQ[ctr].options[1]; // write option 2
+		O3.innerHTML = totQ[ctr].options[2]; // write option 3
+		O4.innerHTML = totQ[ctr].options[3]; // write option 4
 	}
-	if (!thisAsked) {
-		// if random number is already asked and this didn't become true go inside and fire random question again
-		if (queDone != totQ.length)
-			// if not reached total length
-			randomQ(); // re-through random question
-	}
+	ctr++;
 }
 
 function next() {
@@ -241,7 +237,7 @@ function next() {
 		// alert('Good Job! Calculating Result');
 		return false;
 	}
-	randomQ(); // otherwise, fires next question...
+	generateQ();
 }
 
 var buttons = document.querySelectorAll('button.accent.block'); // targetting all buttons
