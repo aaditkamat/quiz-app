@@ -199,10 +199,10 @@ function steps(quizLength) {
 	}
 }
 
-var p = document.getElementById('que'); // the question paragraph
-var Q1 = document.getElementById('q1'); // option 01
-var Q2 = document.getElementById('q2'); // option 02
-var Q3 = document.getElementById('q3'); // option 03
+var p = document.getElementById('text'); // the paragraph
+var Q1 = document.getElementById('q1'); // question 01
+var Q2 = document.getElementById('q2'); // question 02
+var Q3 = document.getElementById('q3'); // question 03
 
 // generates and places random questions...
 function generateQ() {
@@ -215,10 +215,10 @@ function generateQ() {
 		queDoneArr.unshift(ctr); // put in asked quesion array
 		//console.log('QuesDone',queDoneArr);
 		queDone = ++queDone; // increase the counter
-		p.innerHTML = totQ[ctr].passage; // write question
-		Q1.innerHTML = totQ[ctr].questions[0]; // write option 1
-		Q2.innerHTML = totQ[ctr].questions[1]; // write option 2
-		Q3.innerHTML = totQ[ctr].questions[2]; // write option 3
+		p.innerHTML = totQ[ctr].passage; // write passage
+		Q1.innerHTML = totQ[ctr].questions[0]; // write question 1
+		Q2.innerHTML = totQ[ctr].questions[1]; // write question 2
+		Q3.innerHTML = totQ[ctr].questions[2]; // write question 3
 	}
 	ctr++;
 }
@@ -237,7 +237,7 @@ function next() {
 	generateQ();
 }
 
-var buttons = document.querySelectorAll('button.accent.block'); // targetting all buttons
+var buttons = document.querySelectorAll('textarea.response'); // targetting all buttons
 
 // enable btn if radio btn is checked
 var nextBtn = document.getElementById('next-button');
