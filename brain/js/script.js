@@ -206,6 +206,7 @@ var O4 = document.getElementById('opt4'); // option 04
 
 // generates and places random questions...
 function randomQ() {
+	nextBtn.setAttribute('disabled', 'disabled');
 	var thisAsked = false;
 	var x = Math.floor(Math.random() * totQ.length); // get a random number b/w 0 to total questions
 	while (totQ[x].asked === 0) {
