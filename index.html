@@ -12,6 +12,8 @@
 			rel="stylesheet"
 			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
 		/>
+		<!-- blocks.css -->
+		<link rel="stylesheet" href="https://unpkg.com/blocks.css/dist/blocks.min.css" />
 		<!-- Google Material Icons -->
 		<link
 			href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -22,7 +24,7 @@
 		<title>Quiz App!</title>
 		<link rel="icon" type="image/png" href="brain/img/fav.png" />
 	</head>
-	<body onload="chkUser()">
+	<body onload="startQuiz()">
 		<div class="container box-shadow">
 			<!-- The Form -->
 			<div id="username">
@@ -86,7 +88,7 @@
 
 			<!-- Quiz Starts Here -->
 			<section id="theQuiz">
-				<form id="quizForm" onsubmit="return false;">
+				<form id="quizForm" class="wrapper block" onsubmit="return false;">
 					<h2>JavaScript Quiz:</h2>
 
 					<div id="steps" style="text-align:center;">
@@ -98,65 +100,17 @@
 					<div id="tab">
 						<p id="que">---Question---</p>
 						<hr />
-						<div class="custom-control custom-radio">
-							<input
-								type="radio"
-								id="opt1"
-								name="q"
-								class="custom-control-input"
-								onclick="enableBtn(this)"
-								value="1"
-							/>
-							<label
-								class="custom-control-label"
-								onclick="var id = this.previousElementSibling.id; this.setAttribute('for', id)"
-								>---Option 1---</label
-							>
+						<div class="option">
+							<button class="accent block">---Option 1---</button>
 						</div>
-						<div class="custom-control custom-radio">
-							<input
-								type="radio"
-								id="opt2"
-								name="q"
-								class="custom-control-input"
-								onclick="enableBtn(this)"
-								value="2"
-							/>
-							<label
-								class="custom-control-label"
-								onclick="var id = this.previousElementSibling.id; this.setAttribute('for', id)"
-								>---Option 2---</label
-							>
+						<div class="option">
+							<button class="accent block">---Option 2---</button>
 						</div>
-						<div class="custom-control custom-radio">
-							<input
-								type="radio"
-								id="opt3"
-								name="q"
-								class="custom-control-input"
-								onclick="enableBtn(this)"
-								value="3"
-							/>
-							<label
-								class="custom-control-label"
-								onclick="var id = this.previousElementSibling.id; this.setAttribute('for', id)"
-								>---Option 3---</label
-							>
+						<div class="option">
+							<button class="accent block">---Option 3---</button>
 						</div>
-						<div class="custom-control custom-radio">
-							<input
-								type="radio"
-								id="opt4"
-								name="q"
-								class="custom-control-input"
-								onclick="enableBtn(this)"
-								value="4"
-							/>
-							<label
-								class="custom-control-label"
-								onclick="var id = this.previousElementSibling.id; this.setAttribute('for', id)"
-								>---Option 4---</label
-							>
+						<div class="option">
+							<button class="accent block">---Option 4---</button>
 						</div>
 					</div>
 

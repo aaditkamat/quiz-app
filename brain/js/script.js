@@ -244,21 +244,18 @@ function next() {
 	randomQ(); // otherwise, fires next question...
 }
 
-var chkBox = document.getElementsByClassName('custom-control-input'); // targetting all checkboxes...
+var buttons = document.querySelectorAll('button.accent.block'); // targetting all buttons
 
 // deals with validation of radio options and adds to the user's answer Array...
 function validateForm() {
 	var valid = false;
-	for (var i = 0; i < chkBox.length; i++) {
-		// checks every radio btn
-		if (chkBox[i].checked) {
+	for (var i = 0; i < buttons.length; i++) {
+		buttons[i].onclick = () => {
 			// if found checked
 			valid = true;
-			userAns.unshift(chkBox[i].value); // store user's answer
+			userAns.unshift(buttons[i].value); // store user's answer
 			// console.log('userAns:',userAns);
-			chkBox[i].checked = false;
 			nextBtn.setAttribute('disabled', 'disabled'); // disbale button for next question
-			break;
 		}
 	}
 	if (!valid) {

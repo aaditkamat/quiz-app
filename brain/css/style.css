@@ -314,11 +314,11 @@ section#theQuiz {
 	margin-top: -5px;
 }
 
-#quizForm #tab .custom-radio {
+div.option {
 	margin-top: 10px;
 }
 
-#quizForm #tab label.custom-control-label {
+button.accent.block {
 	width: 100%;
 	overflow: auto;
 }
