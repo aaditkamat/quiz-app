@@ -208,7 +208,7 @@ var O4 = document.getElementById('opt4'); // option 04
 function randomQ() {
 	var thisAsked = false;
 	var x = Math.floor(Math.random() * totQ.length); // get a random number b/w 0 to total questions
-	while ((totQ[x].asked === 0) == true) {
+	while (totQ[x].asked === 0) {
 		// if this question is not asked
 		thisAsked = true; // this will be true
 		totQ[x].asked = 1; // mark this as asked
@@ -216,10 +216,10 @@ function randomQ() {
 		//console.log('QuesDone',queDoneArr);
 		queDone = ++queDone; // increase the counter
 		p.innerHTML = totQ[x].question; // write question
-		O1.nextElementSibling.innerHTML = totQ[x].opt1; // write option 1
-		O2.nextElementSibling.innerHTML = totQ[x].opt2; // write option 2
-		O3.nextElementSibling.innerHTML = totQ[x].opt3; // write option 3
-		O4.nextElementSibling.innerHTML = totQ[x].opt4; // write option 4
+		O1.innerHTML = totQ[x].opt1; // write option 1
+		O2.innerHTML = totQ[x].opt2; // write option 2
+		O3.innerHTML = totQ[x].opt3; // write option 3
+		O4.innerHTML = totQ[x].opt4; // write option 4
 	}
 	if (!thisAsked) {
 		// if random number is already asked and this didn't become true go inside and fire random question again
@@ -231,7 +231,6 @@ function randomQ() {
 
 function next() {
 	// user clicks NEXT...
-	if (!validateForm()) return false; // exit if no option in the current tab is selected
 	topping(queDone); // setting up btn and steps counter...
 	if (queDone == totQ.length) {
 		// if reached the end of the questions
@@ -246,34 +245,12 @@ function next() {
 
 var buttons = document.querySelectorAll('button.accent.block'); // targetting all buttons
 
-// deals with validation of radio options and adds to the user's answer Array...
-function validateForm() {
-	var valid = false;
-	for (var i = 0; i < buttons.length; i++) {
-		buttons[i].onclick = () => {
-			// if found checked
-			valid = true;
-			userAns.unshift(buttons[i].value); // store user's answer
-			// console.log('userAns:',userAns);
-			nextBtn.setAttribute('disabled', 'disabled'); // disbale button for next question
-		}
-	}
-	if (!valid) {
-		// if no option selected
-		alert('Please Select Any Option...');
-		nextBtn.setAttribute('disabled', 'disabled');
-	}
-	if (valid)
-		// if the valid status is true, mark the step as finished
-		document.getElementsByClassName('step')[queDone - 1].className += ' finish';
-	return valid; // return the valid status
-}
-
 // enable btn if radio btn is checked
 var nextBtn = document.getElementById('next-button');
-function enableBtn(i) {
-	if (i.checked) nextBtn.removeAttribute('disabled');
-	else nextBtn.setAttribute('disabled', 'disabled');
+function enableBtn(button) {
+	nextBtn.removeAttribute('disabled');
+	userAns.unshift(button.value);
+	document.getElementsByClassName('step')[queDone - 1].className += ' finish';
 }
 
 function topping(n) {
