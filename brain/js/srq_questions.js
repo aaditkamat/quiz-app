@@ -1,0 +1,28 @@
+const totQ = [
+    {
+        "passage":  "I long to hear that you have declared an independency. And, by the way, in the new code of laws which I suppose it will be necessary for you to make, I desire you would remember the ladies and be more generous and favorable to them than your ancestors. Do not put such unlimited power into the hands of the husbands. Remember, all men would be tyrants if they could. If particular care and attention is not paid to the ladies, we are determined to foment a rebellion, and will not hold ourselves bound by any laws in which we have no voice or representation.That your sex are naturally tyrannical is a truth so thoroughly established as to admit of no dispute; but such of you as wish to be happy willingly give up the harsh title of master for the more tender and endearing one of friend. Why, then, not put it out of the power of the vicious and the lawless to use us with cruelty and indignity with impunity? Men of sense in all ages abhor those customs which treat us only as the vassals of your sex; regard us then as beings placed by Providence under your protection, and in imitation of the Supreme Being make use of that power only for our happiness.",
+        "questions": [
+            "Who is the author of this passage?",
+            "What is the message being delivered through this passage?",
+            "Who longed to declare independence?"
+        ],
+        "asked": 0
+    }, {
+        "passage":  "However, he perceived now that it did not greatly matter what kind of soldiers he was going to fi ght, so long as they fought, which fact no one disputed. There was a more serious problem. He lay in his bunk pondering upon it. He tried to mathematically prove to himself that he would not run from a battle. Previously he had never felt obliged to wrestle too seriously with this question. In his life he had taken certain things for granted, never challenging his belief in ultimate success, and bothering little about means and roads. But here he was confronted with a thing of moment. It had suddenly appeared to him that perhaps in a battle he might run. He was forced to admit that as far as war was concerned he knew nothing of himself. A suffi cient time before he would have allowed the problem to kick its heels at the outer portals of his mind, but now he felt compelled to give serious attention to it. A little panic-fear grew in his mind. As his imagination went forward to a fi ght, he saw hideous possibilities. He contemplated the lurking menaces of the future, and failed in an effort to see himself standing stoutly in the midst of them. He recalled his visions of broken-bladed glory, but in the shadow of the impending tumult he suspected them to be impossible pictures. He sprang from the bunk and began to pace nervously to and fro. “Good Lord, what’s th’ matter with me?” he said aloud. He felt that in this crisis his laws of life were useless. Whatever he had learned of himself was here of no avail. He was an unknown quantity. He saw that he would again be obliged to experiment as he had in early youth. He must accumulate information of himself, and meanwhile he resolved to remain close upon his guard lest those qualities of which he knew nothing should everlastingly disgrace him. “Good Lord!” he repeated in dismay.",
+        "questions": [
+            "In this passage, Henry is facing a part of himself that he knew nothing about. What is this characteristic?",
+            "Who is the author of this passage?",
+            "What is the message being delivered through this passage?"
+        ],
+        "asked": 0
+    }, {
+        "passage":  "Churchill’s Speech: We Shall Fight on the BeachesI have, myself, full confi dence that if all do their duty, if nothing is neglected, and if the best arrangements are made, as they are being made, we shall prove ourselves once again able to defend our Island home, to ride out the storm of war, and to outlive the menace of tyranny, if necessary for years, if necessary alone.At any rate, that is what we are going to try to do. That is the resolve of His Majesty’s Government - every man of them. That is the will of Parliament and the nation.The British Empire and the French Republic, linked together in their cause and in their need, will defend to the death their native soil, aiding each other like good comrades to the utmost of their strength.Even though large tracts of Europe and many old and famous States have fallen or may fall into the grip of the Gestapo and all the odious apparatus of Nazi rule, we shall not fl ag or fail.We shall go on to the end, we shall fi ght in France, we shall fi ght on the seas and oceans, we shall fi ght with growing confi dence and growing strength in the air, we shall defend our Island, whatever the cost may be, we shall fi ght on the beaches, we shall fi ght on the landing grounds, we shall fi ght in the fi elds and in the streets, we shall fi ght in the hills; we shall never surrender, and even if, which I do not for a moment believe, this Island or a large part of it were subjugated and starving, then our Empire beyond the seas, armed and guarded by the British Fleet, would carry on the struggle, until, in God’s good time, the New World, with all its power and might, steps forth to the rescue and the liberation of the old.",
+        "questions": [
+            "Why does Churchill repeat the phrase \“we shall fight\” over and over? How does it support the main purpose of this speech?",
+            "Who is the author of this passage?",
+            "What is the message being delivered through this passage?"
+        ],
+        "asked": 0
+    }, 
+
+]
