@@ -9,7 +9,6 @@ var err = document.getElementById('err');
 var errH = document.getElementById('errH');
 var ctr = 0;
 
-console.log(totQ);
 
 /*-----------------------------------*\
 $ On Body Load
