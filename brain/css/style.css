@@ -324,7 +324,6 @@ button.accent.block {
 }
 
 #quizForm button {
-	position: absolute;
 	bottom: -10px;
 	border-radius: 0;
 	width: 100%;
